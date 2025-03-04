@@ -40,6 +40,6 @@ st.subheader("Stock Price Over Time")
 if not latest_data.empty:
     chart_data = latest_data[["timestamp", "price"]].set_index("timestamp")
     st.line_chart(chart_data)
-
+# Refresh the page every 60 seconds
 time.sleep(60)
 st.experimental_rerun()
